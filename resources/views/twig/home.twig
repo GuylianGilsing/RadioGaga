@@ -4,8 +4,21 @@
 <link rel="stylesheet" href="{{ baseURL }}/css/app.css" type="text/css">
 {% endblock %}
 
+{% block js %}
+<script src="{{ baseURL }}/js/global.js"></script>
+{% endblock %}
+
 {% block content %}
-<div class="container-welcome">
-    <h1>Hello {{ baseURL }}!</h1>
-</div>
+{% include "includes/header.twig" %}
+<main>
+    <section id="home-hero">
+        <div class="content">
+            <p class="h1 hero-title">RadioGaga</p>
+            <p>Enjoy some of the greatest hits!</p>
+        </div>
+        <video class="background await-playing" muted loop>
+            <source src="{{ baseURL }}/media/Concert-Video-Background.mp4" type="video/mp4">
+        </video>
+    </section>
+</main>
 {% endblock %}

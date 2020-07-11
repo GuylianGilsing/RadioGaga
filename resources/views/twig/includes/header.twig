@@ -1,0 +1,18 @@
+<header id="main-header">
+    <nav>
+        <a href="{{ baseURL }}" class="logo">RadioGaga</a>
+        {% if mainNavItems|length > 0 %}
+        <ul class="links">
+            {% for navItem in mainNavItems %}
+                {% if navItem.isActive %}
+                    <li class="active">
+                {% else %}
+                    <li>
+                {% endif %}
+                    <a href="{{ navItem.url }}">{{ navItem.displayName }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </nav>
+</header>

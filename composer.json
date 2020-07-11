@@ -9,6 +9,7 @@
             "App\\Core\\": "resources/app/core",
             "App\\Core\\Views\\": "resources/app/core/views",
             "App\\Core\\Sessions\\": "resources/app/core/sessions",
+            "App\\Content\\": "resources/app/content",
             "App\\Interfaces\\": "resources/app/interfaces",
             "App\\Interfaces\\Views\\": "resources/app/interfaces/views",
             "App\\Controllers\\": "app/controllers",

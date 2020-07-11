@@ -46,6 +46,7 @@ class ComposerStaticInit93f38a1f26bd921ed484baaf36f90bd3
             'App\\Core\\Sessions\\' => 18,
             'App\\Core\\' => 9,
             'App\\Controllers\\' => 16,
+            'App\\Content\\' => 12,
         ),
     );
 
@@ -124,9 +125,14 @@ class ComposerStaticInit93f38a1f26bd921ed484baaf36f90bd3
         array (
             0 => __DIR__ . '/../..' . '/app/controllers',
         ),
+        'App\\Content\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/resources/app/content',
+        ),
     );
 
     public static $classMap = array (
+        'App\\Content\\SiteContent' => __DIR__ . '/../..' . '/resources/app/content/SiteContent.php',
         'App\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/controllers/PageController.php',
         'App\\Core\\ContentTools' => __DIR__ . '/../..' . '/resources/app/core/Content.php',
         'App\\Core\\Sessions\\FlashMessage' => __DIR__ . '/../..' . '/resources/app/core/sessions/FlashMessage.php',

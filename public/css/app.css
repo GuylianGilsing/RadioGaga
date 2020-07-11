@@ -3,6 +3,8 @@ html, body{
     min-height: 100vh;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     overflow-y: auto;
 }
@@ -13,6 +15,10 @@ html, body{
 
 *{
     box-sizing: border-box;
+}
+
+main{
+    flex-grow: 1;
 }
 
 .reset-margin{
@@ -80,3 +86,104 @@ a[href]{
 .font-bold{font-weight: 700;}
 .font-extrabold{font-weight: 800;}
 .font-black{font-weight: 900;}
+
+/* 
+
+    --- Main header ---
+
+*/
+
+#main-header{
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+}
+
+#main-header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-header nav .logo{
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#main-header nav .links{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#main-header nav .links li{
+    display: inline-block;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+#main-header nav .links li.active,
+#main-header nav .links li:hover{
+    opacity: 1;
+}
+
+#main-header nav .links li a{
+    padding: 1rem;
+    display: block;
+    color: #fff;
+}
+
+/* 
+
+    --- Home page ---
+
+*/
+
+#home-hero{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+}
+
+#home-hero .content{
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#home-hero .content p{
+    color: #fff;
+}
+
+#home-hero .content .hero-title{
+    margin-bottom: 0.5rem;
+    font-size: 3.0rem;
+}
+
+#home-hero .background{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+#home-hero .background.await-playing{
+    opacity: 0;
+}

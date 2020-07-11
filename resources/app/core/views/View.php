@@ -52,6 +52,12 @@ class View implements ViewInterface
     public function load()
     {
         $this->variables['baseURL'] = ServerBase();
+
+        if($this->request != null)
+        {
+            $pageURI = $this->variables['pageName'] = $this->request->getUri();
+            $this->variables['currentPath'] = $pageURI->getPath();
+        }
     }
 
     /**

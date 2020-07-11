@@ -24,4 +24,5 @@ return array(
     'App\\Core\\Sessions\\' => array($baseDir . '/resources/app/core/sessions'),
     'App\\Core\\' => array($baseDir . '/resources/app/core'),
     'App\\Controllers\\' => array($baseDir . '/app/controllers'),
+    'App\\Content\\' => array($baseDir . '/resources/app/content'),
 );

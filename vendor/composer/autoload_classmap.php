@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Content\\SiteContent' => $baseDir . '/resources/app/content/SiteContent.php',
     'App\\Controllers\\PageController' => $baseDir . '/app/controllers/PageController.php',
     'App\\Core\\ContentTools' => $baseDir . '/resources/app/core/Content.php',
     'App\\Core\\Sessions\\FlashMessage' => $baseDir . '/resources/app/core/sessions/FlashMessage.php',
